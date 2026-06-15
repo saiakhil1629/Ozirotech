@@ -1,0 +1,251 @@
+/* ==========================================================================
+   Ozirotech Design System: Minimalist & Softer-on-the-Eyes Redesign
+   ========================================================================== */
+
+:root {
+  /* Colors - Sleek Dark Slate & Platinum/Indigo Accent */
+  --color-bg: #0a0c10;           /* Soft charcoal dark background */
+  --color-primary: #101216;      /* Slate-gray deep shadow area */
+  --color-secondary: #1c1f26;    /* Dark steel panel background */
+  --color-gold: #94a3b8;         /* Soft slate silver */
+  --color-gold-light: #f8fafc;   /* Soft off-white */
+  --color-gold-dark: #475569;    /* Muted steel gray */
+  --color-gold-glow: rgba(148, 163, 184, 0.05);
+  
+  --color-tech-cyan: #818cf8;    /* Soft Indigo (easy on the eyes) */
+  --color-tech-glow: rgba(129, 140, 248, 0.12);
+  
+  --color-text: #f1f5f9;         /* Softer platinum white */
+  --color-text-muted: #94a3b8;   /* Steel gray */
+  --color-glass-bg: rgba(16, 20, 28, 0.65);
+  --color-glass-border: rgba(226, 232, 240, 0.07);
+
+  /* Fonts */
+  --font-royal: 'Space Grotesk', sans-serif; /* Unified modern sans-serif */
+  --font-tech: 'Space Grotesk', sans-serif;
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-tech);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold-dark);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-royal);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+p {
+  font-family: var(--font-tech);
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-fast);
+}
+
+/* Layout Reset */
+#root {
+  width: 100vw !important;
+  max-width: 100% !important;
+  min-height: 100vh;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  text-align: left !important;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Common Layout Containers */
+.container {
+  width: 100%;
+  max-width: 1200px; /* slightly narrower for focus */
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.section-padding {
+  padding: 90px 0;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 60px 0;
+  }
+}
+
+/* Glow & Gradient Utilities */
+.silver-gradient-text {
+  background: linear-gradient(135deg, var(--color-gold-light) 0%, var(--color-gold) 60%, var(--color-gold-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cyan-gradient-text {
+  background: linear-gradient(135deg, #FFF 0%, var(--color-tech-cyan) 70%, #4f46e5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Border Ornaments (Classic Royal Style) */
+.royal-border-frame {
+  position: relative;
+  border: 1px solid var(--color-glass-border);
+  background: var(--color-glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 8px; /* softer rounded corners */
+}
+
+/* Corner Accents - Hidden in Minimalist design */
+.royal-corner {
+  display: none !important;
+}
+
+/* Subtitle lines */
+.section-header-center {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--color-tech-cyan);
+  margin: 12px auto 0;
+}
+
+.section-subtitle {
+  font-family: var(--font-tech);
+  color: var(--color-tech-cyan);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+/* Elegant Buttons */
+.btn-royal {
+  font-family: var(--font-tech);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  font-size: 0.82rem;
+  padding: 10px 24px;
+  border-radius: 6px;
+  border: 1px solid var(--color-gold-dark);
+  background: transparent;
+  color: var(--color-text);
+  cursor: pointer;
+  position: relative;
+  transition: var(--transition-normal);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-royal:hover {
+  background: var(--color-gold-light);
+  color: #0c0e12;
+  border-color: var(--color-gold-light);
+  transform: translateY(-1px);
+}
+
+.btn-tech {
+  font-family: var(--font-tech);
+  font-weight: 500;
+  font-size: 0.82rem;
+  padding: 10px 24px;
+  border-radius: 6px;
+  border: 1px solid var(--color-tech-cyan);
+  background: rgba(129, 140, 248, 0.06);
+  color: var(--color-tech-cyan);
+  cursor: pointer;
+  transition: var(--transition-normal);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-tech:hover {
+  background: var(--color-tech-cyan);
+  color: #0c0e12;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(129, 140, 248, 0.2);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s var(--transition-normal) forwards;
+}

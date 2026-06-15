@@ -1,0 +1,248 @@
+.global-map-container {
+  width: 100%;
+  background: rgba(16, 20, 28, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.08);
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+.map-card-header {
+  margin-bottom: 20px;
+  max-width: 600px;
+}
+
+.map-description {
+  color: var(--color-text-muted, #94a3b8);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-top: 6px;
+}
+
+.map-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.world-map-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Continents style */
+.continents-group path {
+  fill: #141822;
+  stroke: rgba(148, 163, 184, 0.1);
+  transition: stroke 0.35s ease, fill 0.35s ease;
+}
+
+.continents-group path:hover {
+  fill: #1c2232;
+  stroke: rgba(148, 163, 184, 0.2);
+}
+
+/* Pulsing Node Animation */
+.pulsing-ring {
+  transform-origin: center;
+  animation: pulseNode 3s cubic-bezier(0.25, 0.8, 0.25, 1) infinite;
+}
+
+.hub-node-group:hover .pulsing-ring {
+  stroke-width: 1.8px;
+  animation: pulseNodeHover 1.5s cubic-bezier(0.25, 0.8, 0.25, 1) infinite;
+}
+
+@keyframes pulseNode {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes pulseNodeHover {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+/* Node cores */
+.node-core {
+  transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.hub-node-group:hover .node-core {
+  transform: scale(1.25);
+  fill: #FFF;
+}
+
+.hub-center .node-core {
+  animation: pulseCenter 2s ease-in-out infinite;
+}
+
+@keyframes pulseCenter {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+/* Route Path Styles */
+.route-line {
+  transition: stroke-width 0.3s ease, opacity 0.3s ease;
+}
+
+.route-group.active .route-line {
+  animation: pathDrawIn 1.5s ease-out forwards;
+}
+
+@keyframes pathDrawIn {
+  0% {
+    stroke-dasharray: 0, 1000;
+  }
+}
+
+/* Map HUD Overlay */
+.map-hud-overlay {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  width: calc(100% - 24px);
+  max-width: 300px;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.hud-panel {
+  background: rgba(10, 12, 16, 0.95);
+  border: 1px solid rgba(226, 232, 240, 0.08);
+  border-radius: 6px;
+  padding: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.15);
+}
+
+.hud-panel.animate-panel {
+  transform: translateY(0) scale(1);
+  border-color: var(--color-tech-cyan);
+  box-shadow: 0 4px 16px var(--color-tech-glow);
+}
+
+.default-hud {
+  border-color: rgba(226, 232, 240, 0.06);
+}
+
+.hud-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hud-flag {
+  font-size: 1.15rem;
+}
+
+.hud-hub-name {
+  font-family: var(--font-tech);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #FFF;
+  letter-spacing: 0.5px;
+}
+
+.hud-divider {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(226, 232, 240, 0.15) 0%, rgba(226, 232, 240, 0) 100%);
+  margin: 8px 0;
+}
+
+.hud-panel.animate-panel .hud-divider {
+  background: linear-gradient(90deg, rgba(129, 140, 248, 0.3) 0%, rgba(129, 140, 248, 0) 100%);
+}
+
+.hud-content {
+  font-size: 0.78rem;
+}
+
+.hud-label {
+  display: block;
+  font-size: 0.68rem;
+  color: var(--color-text-muted);
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.hud-panel.animate-panel .hud-label {
+  color: var(--color-tech-cyan);
+}
+
+.hud-tech-text {
+  color: #E2E8F0;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.hud-help-text {
+  color: var(--color-text-muted);
+  margin: 0;
+  line-height: 1.45;
+}
+
+.hud-status {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 8px;
+}
+
+.status-indicator-dot {
+  width: 5px;
+  height: 5px;
+  background: var(--color-tech-cyan);
+  border-radius: 50%;
+  box-shadow: 0 0 6px var(--color-tech-cyan);
+  animation: blinkStatus 1.5s ease-in-out infinite;
+}
+
+.status-text {
+  font-size: 0.7rem;
+  color: var(--color-tech-cyan);
+}
+
+@keyframes blinkStatus {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+@media (max-width: 600px) {
+  .global-map-container {
+    padding: 12px;
+  }
+  .map-hud-overlay {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: none;
+    margin-top: 12px;
+  }
+}

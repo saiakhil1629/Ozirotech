@@ -1,0 +1,132 @@
+.globe-animation-container {
+  width: 100%;
+  height: 100%;
+  max-width: 550px;
+  max-height: 550px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.globe-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  filter: drop-shadow(0 0 30px rgba(13, 31, 61, 0.5));
+}
+
+/* Base rotation classes */
+.orbit-1 {
+  transform-origin: 300px 300px;
+  animation: rotateClockwise 28s linear infinite;
+}
+
+.orbit-2 {
+  transform-origin: 300px 300px;
+  animation: rotateCounterClockwise 20s linear infinite;
+}
+
+.orbit-3 {
+  transform-origin: 300px 300px;
+  animation: rotateSlowClockwise 36s linear infinite;
+}
+
+.globe-mesh {
+  transform-origin: 300px 300px;
+  animation: rotateClockwise 45s linear infinite;
+}
+
+.robot-helm-group {
+  transform-origin: 300px 300px;
+  animation: floatHelm 7s ease-in-out infinite;
+}
+
+/* Keyframe animations */
+@keyframes rotateClockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateCounterClockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotateSlowClockwise {
+  0% {
+    transform: rotate(0deg) scale(0.98);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.02);
+  }
+  100% {
+    transform: rotate(360deg) scale(0.98);
+  }
+}
+
+@keyframes floatHelm {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+  66% {
+    transform: translateY(4px) rotate(-1deg);
+  }
+}
+
+/* Sparkle Animations */
+.sparkles circle {
+  animation: blinkSparkle 4s ease-in-out infinite;
+}
+
+.spark-a { animation-delay: 0s; }
+.spark-b { animation-delay: 0.7s; }
+.spark-c { animation-delay: 1.5s; }
+.spark-d { animation-delay: 2.2s; }
+.spark-e { animation-delay: 1.1s; }
+.spark-f { animation-delay: 3s; }
+
+@keyframes blinkSparkle {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+}
+
+/* Hover effects: speed up orbits and intensify glows when hovering */
+.globe-animation-container:hover .orbit-1 {
+  animation-duration: 14s;
+}
+
+.globe-animation-container:hover .orbit-2 {
+  animation-duration: 10s;
+}
+
+.globe-animation-container:hover .robot-helm-group {
+  animation: floatHelmHover 3s ease-in-out infinite;
+}
+
+@keyframes floatHelmHover {
+  0%, 100% {
+    transform: translateY(0px) scale(1.03);
+  }
+  50% {
+    transform: translateY(-15px) scale(1.06);
+  }
+}
