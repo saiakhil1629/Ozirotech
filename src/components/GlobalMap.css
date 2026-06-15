@@ -1,12 +1,12 @@
 .global-map-container {
   width: 100%;
-  background: rgba(16, 20, 28, 0.55);
+  background: rgba(255, 255, 255, 0.45);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(226, 232, 240, 0.08);
+  border: 1px solid rgba(15, 23, 42, 0.08);
   border-radius: 8px;
   padding: 24px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
   position: relative;
   overflow: hidden;
   margin-top: 30px;
@@ -35,16 +35,15 @@
   display: block;
 }
 
-/* Continents style */
 .continents-group path {
-  fill: #141822;
-  stroke: rgba(148, 163, 184, 0.1);
+  fill: #f1f5f9;
+  stroke: rgba(148, 163, 184, 0.25);
   transition: stroke 0.35s ease, fill 0.35s ease;
 }
 
 .continents-group path:hover {
-  fill: #1c2232;
-  stroke: rgba(148, 163, 184, 0.2);
+  fill: #cbd5e1;
+  stroke: rgba(148, 163, 184, 0.55);
 }
 
 /* Pulsing Node Animation */
@@ -132,11 +131,11 @@
 }
 
 .hud-panel {
-  background: rgba(10, 12, 16, 0.95);
-  border: 1px solid rgba(226, 232, 240, 0.08);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(15, 23, 42, 0.08);
   border-radius: 6px;
   padding: 14px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.15);
 }
 
@@ -164,7 +163,7 @@
   font-family: var(--font-tech);
   font-size: 0.88rem;
   font-weight: 600;
-  color: #FFF;
+  color: var(--color-text);
   letter-spacing: 0.5px;
 }
 
@@ -196,7 +195,7 @@
 }
 
 .hud-tech-text {
-  color: #E2E8F0;
+  color: var(--color-text);
   line-height: 1.4;
   margin: 0;
 }

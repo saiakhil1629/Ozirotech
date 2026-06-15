@@ -60,7 +60,7 @@ const ParticleBackground = () => {
         const opacity = 0.05 + Math.abs(Math.sin(this.pulseValue)) * 0.12;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(226, 232, 240, ${opacity})`; // Soft silver/white particle
+        ctx.fillStyle = `rgba(99, 102, 241, ${opacity})`; // Soft indigo particle
         ctx.fill();
       }
     }
@@ -92,7 +92,7 @@ const ParticleBackground = () => {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(226, 232, 240, ${alpha})`;
+            ctx.strokeStyle = `rgba(99, 102, 241, ${alpha})`;
             ctx.lineWidth = 0.4;
             ctx.stroke();
           }

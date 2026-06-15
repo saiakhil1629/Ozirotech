@@ -68,14 +68,14 @@ const GlobalMap = () => {
         <svg viewBox="0 0 850 420" className="world-map-svg">
           <defs>
             <linearGradient id="mapGlowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#1e293b" />
-              <stop offset="100%" stopColor="#0f172a" />
+              <stop offset="0%" stopColor="#f8fafc" />
+              <stop offset="100%" stopColor="#e2e8f0" />
             </linearGradient>
             
             <linearGradient id="pathGlowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#94A3B8" stopOpacity="0.1" />
-              <stop offset="50%" stopColor="#94A3B8" stopOpacity="0.6" />
-              <stop offset="100%" stopColor="#818cf8" stopOpacity="1" />
+              <stop offset="0%" stopColor="#cbd5e1" stopOpacity="0.1" />
+              <stop offset="50%" stopColor="#94a3b8" stopOpacity="0.6" />
+              <stop offset="100%" stopColor="#4f46e5" stopOpacity="1" />
             </linearGradient>
 
             <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
@@ -88,17 +88,17 @@ const GlobalMap = () => {
           </defs>
 
           {/* Stylized background grid gridlines */}
-          <g className="gridlines" opacity="0.04">
+          <g className="gridlines" opacity="0.06">
             {Array.from({ length: 17 }).map((_, i) => (
-              <line key={`v-${i}`} x1={i * 50} y1="0" x2={i * 50} y2="420" stroke="#FFF" strokeWidth="0.5" />
+              <line key={`v-${i}`} x1={i * 50} y1="0" x2={i * 50} y2="420" stroke="#000" strokeWidth="0.5" />
             ))}
             {Array.from({ length: 9 }).map((_, i) => (
-              <line key={`h-${i}`} x1="0" y1={i * 50} x2="850" y2={i * 50} stroke="#FFF" strokeWidth="0.5" />
+              <line key={`h-${i}`} x1="0" y1={i * 50} x2="850" y2={i * 50} stroke="#000" strokeWidth="0.5" />
             ))}
           </g>
 
           {/* Stylized Continents Mockups */}
-          <g className="continents-group" fill="url(#mapGlowGrad)" stroke="#1B3153" strokeWidth="1">
+          <g className="continents-group" fill="url(#mapGlowGrad)" stroke="#cbd5e1" strokeWidth="1">
             {/* North America */}
             <path d="M 50 100 L 100 80 L 180 85 L 230 110 L 210 160 L 170 170 L 140 150 L 120 180 L 105 160 L 60 140 Z" />
             {/* Greenland */}
