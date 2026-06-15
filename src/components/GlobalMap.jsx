@@ -39,7 +39,7 @@ const GlobalMap = () => {
     },
     {
       id: 'india',
-      name: 'Ozirotech HQ, Bangalore',
+      name: 'Ozirotech HQ, Visakhapatnam',
       x: 585,
       y: 195,
       tech: 'Custom Laboratory Integration, AI System Assembly & Education Deployment',
@@ -48,7 +48,7 @@ const GlobalMap = () => {
     },
   ];
 
-  // Helper to draw arches from sources to India (Bangalore: 585, 195)
+  // Helper to draw arches from sources to India (Visakhapatnam: 585, 195)
   const getArcPath = (startX, startY, endX, endY) => {
     const midX = (startX + endX) / 2;
     const midY = (startY + endY) / 2 - 50; // Curve up

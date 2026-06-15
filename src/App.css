@@ -700,6 +700,112 @@ textarea.form-input-control {
   color: var(--color-tech-cyan);
 }
 
+/* Our Leadership Team Section */
+.team-section {
+  position: relative;
+  background: radial-gradient(circle at 90% 80%, rgba(99, 102, 241, 0.04) 0%, transparent 50%);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.team-visual-frame {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(226, 232, 240, 0.08);
+}
+
+.team-img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+  transition: transform 1.2s var(--transition-slow);
+}
+
+.team-visual-frame:hover .team-img {
+  transform: scale(1.03);
+}
+
+.team-visual-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(3, 7, 18, 0.95) 0%, rgba(3, 7, 18, 0.2) 60%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+}
+
+.team-visual-title {
+  font-size: 1.5rem;
+  color: #FFF;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.team-visual-tagline {
+  color: var(--color-tech-cyan);
+  font-size: 0.82rem;
+  margin-top: 4px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.team-members-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.team-member-card {
+  padding: 24px;
+  transition: var(--transition-normal);
+}
+
+.team-member-card:hover {
+  border-color: rgba(99, 102, 241, 0.35);
+  background: rgba(99, 102, 241, 0.04);
+  transform: translateX(5px);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.08);
+}
+
+.member-info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.member-name {
+  font-family: var(--font-tech);
+  font-size: 1.15rem;
+  color: #FFF;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.member-role {
+  color: var(--color-tech-cyan);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.member-desc {
+  color: var(--color-text-muted);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
 /* Responsive Breakpoints */
 @media (max-width: 1024px) {
   .hero-title-main {
@@ -715,6 +821,13 @@ textarea.form-input-control {
   .labs-showcase-img {
     height: 320px;
   }
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .team-img {
+    height: 380px;
+  }
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -724,18 +837,18 @@ textarea.form-input-control {
   .mobile-nav-drawer {
     display: flex;
     position: fixed;
-    top: 80px;
+    top: 70px;
     left: -100%;
     width: 100%;
-    height: calc(100vh - 80px);
-    background: rgba(3, 8, 18, 0.98);
+    height: calc(100vh - 70px);
+    background: rgba(5, 8, 16, 0.98);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     flex-direction: column;
     padding: 50px 24px;
     gap: 30px;
     transition: var(--transition-normal);
-    border-top: 1px solid rgba(203, 213, 225, 0.15);
+    border-top: 1px solid rgba(226, 232, 240, 0.08);
     z-index: 100;
   }
 

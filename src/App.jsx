@@ -31,6 +31,7 @@ import logoImg from './assets/logo.png';
 import heroBg from './assets/hero_bg.png';
 import aiLabImg from './assets/ai_lab.png';
 import contentLabImg from './assets/content_lab.png';
+import teamImg from './assets/leadership_team.jpg';
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -98,6 +99,7 @@ function App() {
               <li><a href="#" className="nav-item-link active">Home</a></li>
               <li><a href="#vision" className="nav-item-link">Our Vision</a></li>
               <li><a href="#services" className="nav-item-link">Future Labs</a></li>
+              <li><a href="#team" className="nav-item-link">Our Team</a></li>
               <li><a href="#sourcing" className="nav-item-link">Global Logistics</a></li>
               <li><a href="#consultation" className="btn-royal" style={{ padding: '8px 20px', fontSize: '0.8rem' }}>Consult Now</a></li>
             </ul>
@@ -114,6 +116,7 @@ function App() {
           <a href="#" className="nav-item-link" onClick={() => setMobileMenuOpen(false)}>Home</a>
           <a href="#vision" className="nav-item-link" onClick={() => setMobileMenuOpen(false)}>Our Vision</a>
           <a href="#services" className="nav-item-link" onClick={() => setMobileMenuOpen(false)}>Future Labs</a>
+          <a href="#team" className="nav-item-link" onClick={() => setMobileMenuOpen(false)}>Our Team</a>
           <a href="#sourcing" className="nav-item-link" onClick={() => setMobileMenuOpen(false)}>Global Logistics</a>
           <a href="#consultation" className="btn-royal" onClick={() => setMobileMenuOpen(false)}>Consult Now</a>
         </nav>
@@ -123,10 +126,6 @@ function App() {
       <section className="hero-section" id="home">
         <div className="container hero-grid">
           <div className="hero-content animate-fade-in-up">
-            <div className="hero-tag">
-              <span className="hero-tag-dot"></span>
-              Pioneering Academic Innovation
-            </div>
             <h1 className="hero-title-main">
               <span className="silver-gradient-text">Empowering</span>
               <span className="cyan-gradient-text" style={{ fontSize: '3.2rem', marginTop: '-5px' }}>Education</span>
@@ -367,6 +366,80 @@ function App() {
         </div>
       </section>
 
+      {/* 5.5 Our Leadership Team Section */}
+      <section className="team-section section-padding" id="team">
+        <div className="container">
+          <div className="section-header-center">
+            <span className="section-subtitle">EXECUTIVE LEADERSHIP</span>
+            <h2 className="section-title silver-gradient-text">Our Leadership Team</h2>
+            <p className="map-description" style={{ margin: '0 auto', maxWidth: '650px', textAlign: 'center' }}>
+              Meet the visionary minds driving academic innovation, global technology sourcing, and elite robotic laboratories.
+            </p>
+          </div>
+
+          <div className="team-grid">
+            <div className="royal-border-frame team-visual-frame">
+              <div className="royal-corner top-left"></div>
+              <div className="royal-corner top-right"></div>
+              <div className="royal-corner bottom-left"></div>
+              <div className="royal-corner bottom-right"></div>
+              <img src={teamImg} alt="Ozirotech Leadership Team" className="team-img" />
+              <div className="team-visual-overlay">
+                <h3 className="team-visual-title">Ozirotech Executive Board</h3>
+                <span className="team-visual-tagline">Sai Sandesh, Daniel Benjamin, and Devika Pakruthi</span>
+              </div>
+            </div>
+
+            <div className="team-members-list">
+              {/* Member 1: Devika */}
+              <div className="royal-border-frame team-member-card">
+                <div className="royal-corner top-left"></div>
+                <div className="royal-corner top-right"></div>
+                <div className="royal-corner bottom-left"></div>
+                <div className="royal-corner bottom-right"></div>
+                <div className="member-info-header">
+                  <span className="member-name">Devika Pakruthi</span>
+                  <span className="member-role">Founder & Director</span>
+                </div>
+                <p className="member-desc">
+                  Devika Pakruthi established Ozirotech with a mission to revolutionize advanced tech education. Under her guidance, the company has grown into a leading developer of cutting-edge robotic ecosystems and immersive content creation systems.
+                </p>
+              </div>
+
+              {/* Member 2: Daniel */}
+              <div className="royal-border-frame team-member-card">
+                <div className="royal-corner top-left"></div>
+                <div className="royal-corner top-right"></div>
+                <div className="royal-corner bottom-left"></div>
+                <div className="royal-corner bottom-right"></div>
+                <div className="member-info-header">
+                  <span className="member-name">Daniel Benjamin</span>
+                  <span className="member-role">CTO</span>
+                </div>
+                <p className="member-desc">
+                  Daniel Benjamin spearheads technology design and global sourcing protocols. He leads our engineering teams in designing artificial intelligence labs and sourcing custom edge computing components from around the world.
+                </p>
+              </div>
+
+              {/* Member 3: Sai */}
+              <div className="royal-border-frame team-member-card">
+                <div className="royal-corner top-left"></div>
+                <div className="royal-corner top-right"></div>
+                <div className="royal-corner bottom-left"></div>
+                <div className="royal-corner bottom-right"></div>
+                <div className="member-info-header">
+                  <span className="member-name">Sai Sandesh</span>
+                  <span className="member-role">Director</span>
+                </div>
+                <p className="member-desc">
+                  Sai Sandesh drives the company's strategic integration and institutional partnerships. He collaborates closely with elite schools and universities to customize laboratory designs that fit their academic curricula and space requirements.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 6. Global Procurement Sourcing Section */}
       <section className="section-padding" id="sourcing" style={{ background: 'rgba(3, 8, 18, 0.4)' }}>
         <div className="container">
@@ -559,16 +632,16 @@ function App() {
           <div className="footer-contact-info">
             <h4 className="footer-title">Registry Office</h4>
             <div className="footer-contact-row">
-              <MapPin className="footer-contact-icon" size={18} />
-              <span>Bangalore Integration Hub, Karnataka, India</span>
+              <MapPin className="footer-contact-icon" size={18} style={{ flexShrink: 0 }} />
+              <span>Sunrise Towers, 1st floor, IT Sez, Hill-03, Rushikonda, Visakhapatnam, Andhra Pradesh, India - 530048</span>
             </div>
             <div className="footer-contact-row">
-              <Mail className="footer-contact-icon" size={18} />
-              <span>procurement@ozirotech.com</span>
+              <Mail className="footer-contact-icon" size={18} style={{ flexShrink: 0 }} />
+              <span>ozirotech@gmail.com</span>
             </div>
             <div className="footer-contact-row">
-              <Phone className="footer-contact-icon" size={18} />
-              <span>+91 80 4920 1200</span>
+              <Phone className="footer-contact-icon" size={18} style={{ flexShrink: 0 }} />
+              <span>+91 7815823764</span>
             </div>
           </div>
         </div>
