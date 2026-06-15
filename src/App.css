@@ -253,7 +253,7 @@
 
 .vision-card:hover .vision-icon-box {
   background: var(--color-tech-cyan);
-  color: #0c0e12;
+  color: #ffffff;
 }
 
 .vision-card-title {
@@ -282,8 +282,8 @@
 
 .labs-tab-nav {
   display: flex;
-  background: rgba(16, 20, 28, 0.6);
-  border: 1px solid rgba(226, 232, 240, 0.08);
+  background: rgba(15, 23, 42, 0.05);
+  border: 1px solid rgba(15, 23, 42, 0.04);
   padding: 4px;
   border-radius: 30px;
   gap: 4px;
@@ -305,8 +305,8 @@
 
 .tab-btn.active {
   background: var(--color-tech-cyan);
-  color: #0c0e12;
-  box-shadow: 0 4px 12px rgba(129, 140, 248, 0.15);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
 }
 
 .labs-layout-grid {
@@ -321,8 +321,8 @@
   position: relative;
   border-radius: 8px;
   overflow: hidden;
-  border: 1px solid rgba(226, 232, 240, 0.08);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
 }
 
 .labs-showcase-img {
@@ -716,8 +716,8 @@ textarea.form-input-control {
 .team-visual-frame {
   position: relative;
   overflow: hidden;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
-  border: 1px solid rgba(226, 232, 240, 0.08);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(15, 23, 42, 0.06);
 }
 
 .team-img {

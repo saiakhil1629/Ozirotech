@@ -54,12 +54,12 @@ const GlobeAnimation = () => {
         </defs>
 
         {/* Outer Background Glow */}
-        <circle cx="300" cy="300" r="200" fill="url(#royalSilver)" opacity="0.05" filter="url(#softGlow)" />
-        <circle cx="300" cy="300" r="160" fill="url(#techCyan)" opacity="0.03" filter="url(#softGlow)" />
+        <circle cx="300" cy="300" r="200" fill="url(#royalSilver)" opacity="0.02" filter="url(#softGlow)" />
+        <circle cx="300" cy="300" r="160" fill="url(#techCyan)" opacity="0.01" filter="url(#softGlow)" />
 
         {/* Outer Ring 1: Tilted Silver Orbit */}
         <g className="orbit-group orbit-1">
-          <ellipse cx="300" cy="300" rx="250" ry="85" fill="none" stroke="url(#royalSilver)" strokeWidth="2" strokeDasharray="10, 15, 250, 8, 40, 20" filter="url(#royalGlow)" opacity="0.85" />
+          <ellipse cx="300" cy="300" rx="250" ry="85" fill="none" stroke="url(#royalSilver)" strokeWidth="2" strokeDasharray="10, 15, 250, 8, 40, 20" filter="url(#royalGlow)" opacity="0.25" />
           {/* Orbiting Particle */}
           <circle r="7" fill="#FFF" filter="url(#royalGlow)">
             <animateMotion dur="14s" repeatCount="indefinite" path="M 300 300 m -250, 0 a 250,85 0 1,0 500,0 a 250,85 0 1,0 -500,0" />
@@ -68,7 +68,7 @@ const GlobeAnimation = () => {
 
         {/* Outer Ring 2: Opposing Tilted Silver/Cyan Orbit */}
         <g className="orbit-group orbit-2">
-          <ellipse cx="300" cy="300" rx="230" ry="105" fill="none" stroke="url(#techCyan)" strokeWidth="1.5" strokeDasharray="300, 20, 50, 20" opacity="0.65" />
+          <ellipse cx="300" cy="300" rx="230" ry="105" fill="none" stroke="url(#techCyan)" strokeWidth="1.5" strokeDasharray="300, 20, 50, 20" opacity="0.15" />
           {/* Orbiting Particle */}
           <circle r="5.5" fill="#818cf8" filter="url(#royalGlow)">
             <animateMotion dur="9s" repeatCount="indefinite" path="M 300 300 m 230, 0 a 230,105 0 1,0 -460,0 a 230,105 0 1,0 460,0" />
@@ -77,11 +77,11 @@ const GlobeAnimation = () => {
 
         {/* Outer Ring 3: Vertical Tech Ring */}
         <g className="orbit-group orbit-3">
-          <ellipse cx="300" cy="300" rx="110" ry="270" fill="none" stroke="url(#royalSilver)" strokeWidth="1.2" strokeDasharray="80, 40, 20, 40" opacity="0.4" />
+          <ellipse cx="300" cy="300" rx="110" ry="270" fill="none" stroke="url(#royalSilver)" strokeWidth="1.2" strokeDasharray="80, 40, 20, 40" opacity="0.1" />
         </g>
 
         {/* Tech Grid Background Globe */}
-        <g className="globe-mesh" filter="url(#royalGlow)" opacity="0.25">
+        <g className="globe-mesh" filter="url(#royalGlow)" opacity="0.08">
           {/* Latitudes */}
           <circle cx="300" cy="300" r="160" fill="none" stroke="url(#royalSilver)" strokeWidth="1.2" />
           <ellipse cx="300" cy="300" rx="160" ry="125" fill="none" stroke="url(#royalSilver)" strokeWidth="0.8" />
@@ -102,11 +102,11 @@ const GlobeAnimation = () => {
           <circle cx="300" cy="300" r="110" fill="url(#darkGlass)" stroke="url(#royalSilver)" strokeWidth="4" filter="url(#royalGlow)" />
           
           {/* Outer Shield Halo */}
-          <circle cx="300" cy="300" r="122" fill="none" stroke="url(#techCyan)" strokeWidth="1.5" strokeDasharray="15,10,5,10" opacity="0.6" />
+          <circle cx="300" cy="300" r="122" fill="none" stroke="url(#techCyan)" strokeWidth="1.5" strokeDasharray="15,10,5,10" opacity="0.15" />
 
           {/* Silver Orbit Ring Intersecting Inner Globe */}
-          <ellipse cx="300" cy="300" rx="140" ry="30" fill="none" stroke="url(#royalSilver)" strokeWidth="3" opacity="0.8" />
-          <ellipse cx="300" cy="300" rx="140" ry="30" fill="none" stroke="#F1F5F9" strokeWidth="1" strokeDasharray="30, 20" opacity="0.9" />
+          <ellipse cx="300" cy="300" rx="140" ry="30" fill="none" stroke="url(#royalSilver)" strokeWidth="3" opacity="0.25" />
+          <ellipse cx="300" cy="300" rx="140" ry="30" fill="none" stroke="#F1F5F9" strokeWidth="1" strokeDasharray="30, 20" opacity="0.3" />
 
           <g transform="translate(300, 300) scale(0.35) translate(-300, -300)">
             {/* Robot Head Base Structure */}

@@ -4,22 +4,22 @@
 
 :root {
   /* Colors - Clean Elegant Light Theme */
-  --color-bg: #ffffff;           /* Crisp white background */
-  --color-primary: #f8fafc;      /* Soft off-white / light slate */
+  --color-bg: #f8fafc;           /* Softer premium off-white */
+  --color-primary: #ffffff;      /* Solid white for clean card surfaces */
   --color-secondary: #f1f5f9;    /* Clean slate light gray */
   
-  --color-gold: #475569;         /* Elegant dark slate gray */
+  --color-gold: #334155;         /* Elegant dark slate gray */
   --color-gold-light: #0f172a;   /* Deep charcoal/black */
-  --color-gold-dark: #64748b;    /* Muted gray slate */
-  --color-gold-glow: rgba(15, 23, 42, 0.03);
+  --color-gold-dark: #475569;    /* Muted gray slate */
+  --color-gold-glow: rgba(15, 23, 42, 0.02);
   
   --color-tech-cyan: #4f46e5;    /* Premium Royal Indigo Accent */
-  --color-tech-glow: rgba(79, 70, 229, 0.15);
+  --color-tech-glow: rgba(79, 70, 229, 0.08);
   
   --color-text: #0f172a;         /* Deep charcoal text */
   --color-text-muted: #475569;   /* Slate gray text */
-  --color-glass-bg: rgba(255, 255, 255, 0.75); /* Frosted white glass */
-  --color-glass-border: rgba(15, 23, 42, 0.08); /* Clean subtle border */
+  --color-glass-bg: rgba(255, 255, 255, 0.9); /* Frosted white glass card surface */
+  --color-glass-border: rgba(15, 23, 42, 0.06); /* Clean subtle slate border */
 
   /* Fonts */
   --font-royal: 'Space Grotesk', sans-serif;
@@ -189,14 +189,14 @@ a {
   background: var(--color-glass-bg);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
   border-radius: 12px; /* Smoother, more organic curves */
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
 }
 
 .royal-border-frame:hover {
-  border-color: rgba(99, 102, 241, 0.35);
-  box-shadow: 0 15px 35px rgba(99, 102, 241, 0.08);
+  border-color: rgba(79, 70, 229, 0.25);
+  box-shadow: 0 15px 35px rgba(79, 70, 229, 0.08);
 }
 
 /* Corner Accents - Hidden in Minimalist design */

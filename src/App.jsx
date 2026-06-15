@@ -386,7 +386,7 @@ function App() {
               <img src={teamImg} alt="Ozirotech Leadership Team" className="team-img" />
               <div className="team-visual-overlay">
                 <h3 className="team-visual-title">Ozirotech Executive Board</h3>
-                <span className="team-visual-tagline">Sai Sandesh, Daniel Benjamin, and Devika Pakruthi</span>
+                <span className="team-visual-tagline">Devika Pakruthi, Daniel Benjamin, and Sai Sandesh</span>
               </div>
             </div>
 
