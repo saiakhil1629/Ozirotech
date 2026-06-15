@@ -27,6 +27,7 @@ import {
 } from 'lucide-react';
 
 // Sourced image assets
+import logoImg from './assets/logo.png';
 import heroBg from './assets/hero_bg.png';
 import aiLabImg from './assets/ai_lab.png';
 import contentLabImg from './assets/content_lab.png';
@@ -84,17 +85,7 @@ function App() {
       <header className={`nav-header ${isScrolled ? 'scrolled' : ''}`}>
         <div className="container nav-container">
           <a href="#" className="logo-link">
-            {/* Royal crest vector drawing inline */}
-            <svg viewBox="0 0 100 100" className="logo-icon-svg">
-              <circle cx="50" cy="50" r="45" fill="none" stroke="url(#logoSilver)" strokeWidth="3" />
-              <path d="M 50 15 L 62 45 L 88 45 L 67 62 L 75 90 L 50 72 L 25 90 L 33 62 L 12 45 L 38 45 Z" fill="url(#logoSilver)" />
-              <defs>
-                <linearGradient id="logoSilver" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#FFFFFF" />
-                  <stop offset="100%" stopColor="#CBD5E1" />
-                </linearGradient>
-              </defs>
-            </svg>
+            <img src={logoImg} className="logo-icon-img" alt="Ozirotech Logo" />
             <div className="logo-text">
               <span className="silver-gradient-text" style={{ lineHeight: 1.1 }}>OZIROTECH</span>
               <span className="logo-sub">AI WORLD</span>
@@ -531,10 +522,7 @@ function App() {
         <div className="container footer-grid">
           <div className="footer-brand">
             <a href="#" className="logo-link">
-              <svg viewBox="0 0 100 100" className="logo-icon-svg" style={{ width: '36px', height: '36px' }}>
-                <circle cx="50" cy="50" r="45" fill="none" stroke="url(#logoSilver)" strokeWidth="3" />
-                <path d="M 50 15 L 62 45 L 88 45 L 67 62 L 75 90 L 50 72 L 25 90 L 33 62 L 12 45 L 38 45 Z" fill="url(#logoSilver)" />
-              </svg>
+              <img src={logoImg} className="logo-icon-img" alt="Ozirotech Logo" style={{ width: '36px', height: '36px' }} />
               <div className="logo-text">
                 <span className="silver-gradient-text" style={{ fontSize: '1.1rem' }}>OZIROTECH</span>
                 <span className="logo-sub" style={{ fontSize: '0.55rem' }}>AI WORLD</span>

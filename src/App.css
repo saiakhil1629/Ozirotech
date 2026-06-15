@@ -41,9 +41,11 @@
   gap: 10px;
 }
 
-.logo-icon-svg {
+.logo-icon-svg,
+.logo-icon-img {
   width: 32px;
   height: 32px;
+  object-fit: contain;
 }
 
 .logo-text {
